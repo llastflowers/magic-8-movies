@@ -5,7 +5,7 @@ export const searchMovies = async (query: string) => {
   const response = await fetch(
     `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(
       query
-    )}`
+    )}&include_adult=false`
   );
   if (!response.ok) {
     throw new Error("Failed to fetch data");
