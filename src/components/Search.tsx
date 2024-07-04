@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { searchMovies } from "../tmdbApi";
+import SearchResults from "./SearchResults";
 import "./Search.css";
 
 const Search: React.FC = () => {
@@ -44,6 +45,7 @@ const Search: React.FC = () => {
           Submit
         </button>
       </form>
+      <SearchResults results={results} />
     </div>
   );
 };

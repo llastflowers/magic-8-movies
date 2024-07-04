@@ -1,0 +1,34 @@
+.search-results {
+  width: 1000px;
+  margin-top: 20px;
+}
+
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding-bottom: 80px;
+}
+
+.search-results li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.search-results__poster-container {
+  width: 150px;
+  height: 225px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.search-results__poster {
+  width: 150px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+}
