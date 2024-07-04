@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import logo from "../assets/m8m-logo-lt-nt.png";
+import Search from "./Search";
 
 const HomePage: React.FC = () => {
   return (
@@ -16,18 +17,7 @@ const HomePage: React.FC = () => {
             movie you love.
           </p>
         </div>
-        <div className="home__search">
-          <label htmlFor="movie-search" className="home__search-label">
-            Enter movie title:
-          </label>
-          <input
-            type="text"
-            id="movie-search"
-            className="home__search-box"
-            // placeholder="..."
-          />
-          <button className="home__submit-button">Submit</button>
-        </div>
+        <Search />
       </main>
       <footer className="home__footer">
         <p>©2024 Brittany Houtz</p>

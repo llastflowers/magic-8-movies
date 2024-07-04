@@ -1,0 +1,35 @@
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search__label {
+  margin-right: 10px;
+  line-height: 30px;
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+}
+
+.search__input {
+  height: 26px;
+  width: 200px;
+  padding-left: 5px;
+  border-radius: 5px;
+  border: 1px solid #282c34;
+}
+
+.search__submit-button {
+  background-color: #282c34;
+  color: #fffef3;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 10px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #282c34;
+}
