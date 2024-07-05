@@ -12,3 +12,13 @@ export const searchMovies = async (query: string) => {
   }
   return response.json();
 };
+
+export const getRecommendations = async (movieId: number) => {
+  const response = await fetch(
+    `${BASE_URL}/movie/${movieId}/recommendations?api_key=${API_KEY}`
+  );
+  if (!response.ok) {
+    throw new Error("Failed to fetch recommendations");
+  }
+  return response.json();
+};
