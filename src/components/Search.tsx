@@ -1,21 +1,24 @@
 import React, { useState } from "react";
-import { searchMovies } from "../tmdbApi";
+import { searchMovies, getRecommendations } from "../tmdbApi";
 import SearchResults from "./SearchResults";
+import Recommendations from "./Recommendations";
 import "./Search.css";
 
 const Search: React.FC = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<any[]>([]);
+  const [recommendations, setRecommendations] = useState<any[]>([]);
+  const [showRecommendations, setShowRecommendations] = useState(false);
+  const [searchSubmitted, setSearchSubmitted] = useState(false);
 
   const handleSearch = async (query: string) => {
     try {
       const data = await searchMovies(query);
       setResults(data.results);
+      setSearchSubmitted(true);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-    console.log("Searched for:", query);
-    console.log("Search results:", results);
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,25 +30,62 @@ const Search: React.FC = () => {
     handleSearch(query);
   };
 
+  const handleMovieSelect = async (movieId: number) => {
+    try {
+      const data = await getRecommendations(movieId);
+      const topRecommendations = data.results.slice(0, 8);
+      setRecommendations(topRecommendations);
+      setShowRecommendations(true);
+    } catch (error) {
+      console.error("Error fetching recommendations:", error);
+    }
+  };
+
+  const handleBackToSearch = () => {
+    setShowRecommendations(false);
+    setRecommendations([]);
+  };
+
   return (
     <div className="search">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="movie-search" className="search__label">
-          Enter movie title:
-        </label>
-        <input
-          type="text"
-          id="movie-search"
-          className="search__input"
-          value={query}
-          onChange={handleChange}
-          placeholder="Enter a movie title..."
+      {!showRecommendations ? (
+        <>
+          <div className="search__blurb">
+            <p>
+              Use the search box below to find movie recommendations based on a
+              movie you love.
+            </p>
+          </div>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="movie-search" className="search__label">
+              Enter movie title:
+            </label>
+            <input
+              type="text"
+              id="movie-search"
+              className="search__input"
+              value={query}
+              onChange={handleChange}
+            />
+            <button type="submit" className="search__submit-button">
+              Submit
+            </button>
+          </form>
+          {searchSubmitted && (
+            <>
+              <SearchResults
+                results={results}
+                onMovieSelect={handleMovieSelect}
+              />
+            </>
+          )}
+        </>
+      ) : (
+        <Recommendations
+          recommendations={recommendations}
+          onBack={handleBackToSearch}
         />
-        <button type="submit" className="search__submit-button">
-          Submit
-        </button>
-      </form>
-      <SearchResults results={results} />
+      )}
     </div>
   );
 };

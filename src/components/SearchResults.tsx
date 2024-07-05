@@ -1,31 +1,25 @@
 import React from "react";
 import "./SearchResults.css";
 import placeholder from "../assets/poster-placeholder.png";
-import { getRecommendations } from "../tmdbApi";
 
 interface SearchResultsProps {
   results: any[];
+  onMovieSelect: (movieId: number) => void;
 }
 
 const BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w200";
 
-const SearchResults: React.FC<SearchResultsProps> = ({ results }) => {
-  const handleRecommendations = async (movieId: number) => {
-    try {
-      const data = await getRecommendations(movieId);
-      const topRecommendations = data.results.slice(0, 8);
-      console.log("Top 8 Recommendations:", topRecommendations);
-    } catch (error) {
-      console.error("Error fetching recommendations:", error);
-    }
-  };
-
+const SearchResults: React.FC<SearchResultsProps> = ({
+  results,
+  onMovieSelect,
+}) => {
   return (
     <div className="search-results">
+      <h2>Confirm your selection below:</h2>
       {results.length > 0 && (
         <ul>
           {results.map((movie) => (
-            <li key={movie.id} onClick={() => handleRecommendations(movie.id)}>
+            <li key={movie.id} onClick={() => onMovieSelect(movie.id)}>
               <div className="search-results__poster-container">
                 <img
                   src={

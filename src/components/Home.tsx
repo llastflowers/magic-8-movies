@@ -11,12 +11,6 @@ const HomePage: React.FC = () => {
         <img src={logo} alt="Magic 8 Movies Logo" className="home__logo"></img>
       </header>
       <main className="home__main">
-        <div className="home__blurb">
-          <p>
-            Use the search box below to find movie recommendations based on a
-            movie you love.
-          </p>
-        </div>
         <Search />
       </main>
       <footer className="home__footer">
