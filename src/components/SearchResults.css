@@ -1,5 +1,5 @@
 .search-results {
-  width: 1000px;
+  width: 1200px;
   margin-top: 20px;
 }
 
@@ -8,7 +8,7 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  gap: 20px;
   padding-bottom: 80px;
 }
 
@@ -20,15 +20,25 @@
 }
 
 .search-results__poster-container {
-  width: 150px;
-  height: 225px;
+  width: 200px;
+  height: 300px;
   overflow: hidden;
   margin-bottom: 10px;
 }
 
 .search-results__poster {
-  width: 150px;
+  width: 200px;
   height: auto;
   margin-right: 10px;
   border-radius: 5px;
+}
+
+.search-results__info {
+  width: 200px;
+  margin-left: 5px;
+  font-family: "Nunito", sans-serif;
+}
+
+.search-results__title {
+  font-weight: 800;
 }

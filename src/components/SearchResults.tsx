@@ -26,7 +26,10 @@ const SearchResults: React.FC<SearchResultsProps> = ({ results }) => {
                   className="search-results__poster"
                 />
               </div>
-              <p>{movie.title}</p>
+              <div className="search-results__info">
+                <span className="search-results__title">{movie.title}</span>
+                <span> | {movie.release_date.substring(0, 4)}</span>
+              </div>
             </li>
           ))}
         </ul>
