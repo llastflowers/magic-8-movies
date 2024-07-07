@@ -46,6 +46,14 @@ const Search: React.FC = () => {
     setRecommendations([]);
   };
 
+  const handleNewSearch = () => {
+    setQuery("");
+    setResults([]);
+    setRecommendations([]);
+    setShowRecommendations(false);
+    setSearchSubmitted(false);
+  };
+
   return (
     <div className="search">
       {!showRecommendations ? (
@@ -61,7 +69,7 @@ const Search: React.FC = () => {
               Enter movie title:
             </label>
             <input
-              type="text"
+              type="search"
               id="movie-search"
               className="search__input"
               value={query}
@@ -84,6 +92,7 @@ const Search: React.FC = () => {
         <Recommendations
           recommendations={recommendations}
           onBack={handleBackToSearch}
+          onNewSearch={handleNewSearch}
         />
       )}
     </div>

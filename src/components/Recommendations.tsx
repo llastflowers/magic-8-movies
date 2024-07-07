@@ -5,6 +5,7 @@ import placeholder from "../assets/poster-placeholder.png";
 interface RecommendationsProps {
   recommendations: any[];
   onBack: () => void;
+  onNewSearch: () => void;
 }
 
 const BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w200";
@@ -12,11 +13,18 @@ const BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w200";
 const Recommendations: React.FC<RecommendationsProps> = ({
   recommendations,
   onBack,
+  onNewSearch,
 }) => {
   return (
     <div className="recommendations">
       <button onClick={onBack} className="recommendations__back-button">
-        ⟪⟪ Back to Search
+        ⟪⟪ Back to Results
+      </button>
+      <button
+        onClick={onNewSearch}
+        className="recommendations__new-search-button"
+      >
+        New Search
       </button>
 
       <h2>

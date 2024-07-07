@@ -22,12 +22,19 @@
 }
 
 .search__input {
-  height: 26px;
+  height: 28px;
   width: 200px;
-  padding-left: 7px;
+  padding: 0 7px 0 7px;
   border-radius: 5px;
   border: 1px solid #282c34;
   margin-bottom: 10px;
+  font-family: "Nunito", sans-serif;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search__input::-webkit-search-cancel-button {
+  cursor: pointer;
 }
 
 .search__submit-button {
