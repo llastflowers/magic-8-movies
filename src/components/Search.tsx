@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { searchMovies, getRecommendations } from "../tmdbApi";
+import { searchMovies, getRecommendations } from "../api/tmdbApi";
 import SearchResults from "./SearchResults";
 import Recommendations from "./Recommendations";
 import "./Search.css";

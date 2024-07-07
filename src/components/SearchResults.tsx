@@ -1,6 +1,6 @@
 import React from "react";
 import "./SearchResults.css";
-import placeholder from "../assets/poster-placeholder.png";
+import placeholder from "../assets/images/poster-placeholder.png";
 
 interface SearchResultsProps {
   results: any[];

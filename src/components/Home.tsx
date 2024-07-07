@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import logo from "../assets/m8m-logo-lt-nt.png";
+import logo from "../assets/logos/m8m-logo-lt-nt.png";
 import Search from "./Search";
 
 const HomePage: React.FC = () => {
