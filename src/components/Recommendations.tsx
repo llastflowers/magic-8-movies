@@ -15,12 +15,15 @@ const Recommendations: React.FC<RecommendationsProps> = ({
 }) => {
   return (
     <div className="recommendations">
-      <button onClick={onBack} className="recommendations__back-button">
+      <button
+        onClick={onBack}
+        className="recommendations__button recommendations__back-button"
+      >
         ⟪⟪ Back to Results
       </button>
       <button
         onClick={onNewSearch}
-        className="recommendations__new-search-button"
+        className="recommendations__button recommendations__new-search-button"
       >
         New Search
       </button>
