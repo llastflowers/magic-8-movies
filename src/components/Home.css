@@ -6,6 +6,34 @@
   font-size: 25px;
   font-family: "Josefin Sans", sans-serif;
   color: #fffef3;
+
+  h1 {
+    padding-top: 10px;
+  }
+}
+
+.home__header::before,
+.home__header::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  width: calc(100% + 20px);
+  height: 20px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 20px,
+    #fffef3 20px,
+    #fffef3 45px
+  );
+}
+
+.home__header::before {
+  top: 10px;
+}
+
+.home__header::after {
+  bottom: 10px;
 }
 
 .home__logo {
@@ -13,7 +41,7 @@
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
-  height: 90px;
+  height: 60px;
 }
 
 .home__main {
