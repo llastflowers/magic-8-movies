@@ -5,18 +5,18 @@
 
 .search-results h2 {
   text-align: center;
-  color: #282c34;
   font-family: "Nunito", sans-serif;
+  color: #282c34;
   margin-bottom: 30px;
 }
 
 .search-results ul {
-  list-style-type: none;
   padding: 0;
+  padding-bottom: 80px;
+  list-style-type: none;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  padding-bottom: 80px;
 }
 
 .search-results li {
@@ -30,8 +30,8 @@
 .search-results__poster-container {
   width: 200px;
   height: 300px;
-  overflow: hidden;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .search-results__poster {

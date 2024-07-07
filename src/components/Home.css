@@ -1,15 +1,15 @@
 .home__header {
   position: relative;
-  text-align: center;
   background-color: #282c34;
+  text-align: center;
   padding: 10px;
   font-size: 25px;
   font-family: "Josefin Sans", sans-serif;
   color: #fffef3;
+}
 
-  h1 {
-    padding-top: 10px;
-  }
+.home__header h1 {
+  padding-top: 10px;
 }
 
 .home__header::before,
@@ -38,8 +38,8 @@
 
 .home__logo {
   position: absolute;
-  right: 30px;
   top: 50%;
+  right: 30px;
   transform: translateY(-50%);
   height: 60px;
 }
@@ -49,12 +49,12 @@
 }
 
 .home__footer {
-  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background-color: #282c34;
+  text-align: center;
   padding: 10px;
   font-family: "Pacifico", cursive;
   color: #fffef3;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
 }
