@@ -1,19 +1,39 @@
-# Magic 8 Movies 🎱🔮
+# Magic 8 Movies ✨ 🎱 🔮
+Get recommendations for what to watch next based on a movie you already know and love—it's like magic! ✨
 
-Get recommendations for what to watch next based on a movie you already know and love--it's like magic! ✨
+## Getting Started
 
-## Getting Started with Create React App
+This project was bootstrapped with Create React App.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prerequisites
 
-## Available Scripts
+Ensure you have Node.js and npm installed on your machine.
 
-In the project directory, you can run:
+## Setup Instructions
 
-### `npm start`
+1. **Clone the Repository**:
+    ```sh
+    git clone <repository-url>
+    cd <repository-directory>
+    ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. **Install Dependencies**:
+    ```sh
+    npm install
+    ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3. **Environment Variables**:
+    - Create a `.env` file in the root of the project with the following content:
+      ```
+      REACT_APP_TMDB_API_KEY={api_key_here}
+      ```
+
+4. **Run the App**:
+    ```sh
+    npm start
+    ```
+    - Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Additional Information
+
+- **API Documentation**: [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction)
