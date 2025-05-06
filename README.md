@@ -1,6 +1,8 @@
 # Magic 8 Movies ✨ 🎱 🔮
 Get recommendations for what to watch next based on a movie you already know and love—it's like magic! ✨
 
+Live [here](https://magic8movies.netlify.app/)
+
 ## Getting Started
 
 This project was bootstrapped with Create React App.
